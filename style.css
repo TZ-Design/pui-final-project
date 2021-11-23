@@ -1,0 +1,132 @@
+body{
+  background-color: #000;
+  padding:5%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Roboto Mono', monospace;
+  color: #ffffff;
+}
+
+path {
+  stroke: white;
+  stroke-width: 0.5px;
+  /* fill: black; */
+}
+
+.state {
+  stroke-width: 0.5px;
+  /* stroke: #ffffff; */
+  stroke: #000;
+
+}
+
+.state:hover {
+  fill: #FFD43E;
+  cursor: pointer;
+}
+
+p{
+  font-family: 'Roboto Mono', monospace;
+  color: #e2e2e2;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+a{
+  color: #fff;
+}
+
+h4{
+  font-weight: 400;
+}
+
+h3{
+  font-weight: 400;
+  font-size: 50px;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 120px;
+  min-height: 30px;
+  padding: 8px 12px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  background:white;
+  border: 0px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+#title{
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #FFD43E;
+}
+
+#gender, #rate, #gender-m, #gender-f, #total{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 15px;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+text.label{
+  font-size: 12px;
+  width: 200px;
+}
+
+.legend {
+	padding-top: 60px;
+  padding-left: 10px;
+  float: left;
+}
+
+.axis text {
+	font-size: 12px ;
+  font-family: 'Roboto Mono', monospace;
+  color:#ffffff;
+}
+
+.axis line, .axis path {
+	fill: none;
+	stroke: #fff;
+	shape-rendering: crispEdges;
+}
+
+.bar{
+  fill:#5f89ad;
+}
+
+.legend{
+  float: left;
+  position: relative;
+  color: #ffffff;
+}
+
+/* #gender{
+  position: relative;
+  float: left;
+} */
+
+#vis{
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+text {
+  fill: #ffffff;
+  opacity: 0.9;
+}
+
+#instruction{
+  font-size: 13px;
+}
