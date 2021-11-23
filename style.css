@@ -1,8 +1,8 @@
 body{
   background-color: #000;
   padding-top:50px;
-  padding-left:50px;
-  padding-right:50px;
+  /* padding-left:50px;
+  padding-right:50px; */
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -120,16 +120,15 @@ text.label{
 }
 
 .legend{
-  /* float: left;
-  position: relative; */
   color: #ffffff;
 }
 
 #vis{
   display: grid;
-  grid-template-columns: 75% 25%;
-  gap: 10px;
-  /* grid-auto-rows: minmax(500px, auto); */
+  /* grid-template-columns: 75% 25%; */
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  /* gap: 10px; */
+  gap: 1rem;
 }
 
 text {
