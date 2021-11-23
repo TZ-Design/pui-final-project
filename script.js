@@ -48,8 +48,11 @@ d3.csv("data_aggregation.csv", function(data) {
     });
 
     //set colors 
-    lowColor = '#f2f5f7';
-    highColor = '#2874A6';
+    //lowColor = '#f2f5f7';
+    lowColor = '#e1e0ff';
+    //highColor = '#2874A6';
+    highColor = '#6765c9';
+    //7271c9
 
     var ramp = d3.scaleLinear()
         .domain([min,max])
@@ -83,7 +86,7 @@ d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73c
 
             tooltip.style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY) + "px")
-                .text(()=> `${d.state}: ${(d[percent])}%; \n\n Total: ${(d.inventor_count)}`)
+                .text(()=> `${d.state}: ${(d[percent])}%`)
                 .attr("font-family","Roboto Mono")
                 
         })
@@ -343,7 +346,7 @@ d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73c
                     .attr("y", 60) 
                     .attr("height", 26) //height of the bar
                     .attr("x", 10) //x position for the bar
-                    .style("fill","lightpink")
+                    .style("fill","#ff9cab")
                     .attr("width", function(d) {
                         return graphx(gcount);
                     });
