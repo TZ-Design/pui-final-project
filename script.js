@@ -11,16 +11,21 @@ Number.prototype.round = function (decimals) {
     return Number((Math.round(this + "e" + decimals) + "e-" + decimals));
 };
 
-const width = 800;
-const height = 500;
-const svg = d3.select("#map").append("svg")
+const width = 600;
+const height = 400;
+const svg = d3.select("#map")
+    //.append("svg")
+    //.attr("viewBox", '0 0 1000 1500')
+    //.attr("preserveAspectRatio", "xMidYMid meet")
+    //.attr("preserveAspectRatio", "none")
     .attr("width", width)
     .attr("height", height)
-    .append('g');
+    .append('g')
+    
 
 const projection = d3.geoAlbersUsa()
         .translate([width / 2, height / 2]) // translate to center of screen
-        .scale([1000]); // scale things down so see entire US
+        .scale([800]); // scale things down so see entire US
  
 const path = d3.geoPath().projection(projection);
 
@@ -48,11 +53,8 @@ d3.csv("data_aggregation.csv", function(data) {
     });
 
     //set colors 
-    //lowColor = '#f2f5f7';
     lowColor = '#e1e0ff';
-    //highColor = '#2874A6';
     highColor = '#6765c9';
-    //7271c9
 
     var ramp = d3.scaleLinear()
         .domain([min,max])
@@ -82,7 +84,7 @@ d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73c
         .on('mousemove', function (d) {
             tooltip.transition()
                 .duration(200)
-                .style("opacity", .9);
+                .style("opacity", .8);
 
             tooltip.style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY) + "px")
@@ -177,6 +179,7 @@ d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73c
             .append("svg")
             .attr("width", w)
             .attr("height", h)
+            //.attr("transform", "rotate(90)")
             .attr("class", "legend");
 
         var legend = key.append("defs")
@@ -253,6 +256,11 @@ d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73c
             .transition()
             .duration(100)
             .style("opacity", 1)
+
+            d3.select("#genderLabel")
+            .transition()
+            .duration(100)
+            .style("opacity",1)
         }
             
         //bar chart for gender distribution
@@ -292,9 +300,11 @@ d3.json("https://gist.githubusercontent.com/Bradleykingz/3aa5206b6819a3c38b5d73c
             graph.append("g")
                 .attr("class", "y axis")
                 .append("text")
+                .attr("id","genderLabel")
                 .attr("text-anchor", "end")
                 .attr("transform", "rotate(-90)")
                 .text("Female" + " | "+  "Male")
+                .style("opacity",0)
                 .call(y_axis)
 
         // draw bar chart for gender distribution

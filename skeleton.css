@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -51,10 +51,10 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 90%; }
   .column,
   .columns {
-    margin-left: 4%; }
+    margin-left: 3%; }
   .column:first-child,
   .columns:first-child {
     margin-left: 0; }
@@ -157,8 +157,8 @@ p {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: #1EAEDB; }
+/* a {
+  color: #1EAEDB; } */
 a:hover {
   color: #0FA0CE; }
 
@@ -354,7 +354,7 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2rem; }
 
 
 /* Utilities
@@ -415,4 +415,4 @@ there.
 @media (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1440px) {}
