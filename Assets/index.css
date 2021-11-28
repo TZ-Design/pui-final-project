@@ -15,3 +15,8 @@
 #description{
     position: relative;
 }
+
+#icon{
+    width: 35px;
+    height: auto;
+}

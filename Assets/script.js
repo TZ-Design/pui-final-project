@@ -29,9 +29,6 @@ const projection = d3.geoAlbersUsa()
  
 const path = d3.geoPath().projection(projection);
 
-//import the csv data 
-const idata = d3.csv("data_aggregation.csv");
-
 //create tooltip
 const tooltip = d3.select("body").append("div")
             .attr("class", "tooltip")
@@ -41,7 +38,7 @@ const tooltip = d3.select("body").append("div")
 const instruction = d3.select("#instruction")
 
 
-d3.csv("data_aggregation.csv", function(data) {
+d3.csv("Assets/data_aggregation.csv", function(data) {
     var percent = 'inventor_percent'
 
     // checking the min and max of the inventor_percent
